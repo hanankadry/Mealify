@@ -527,8 +527,12 @@ div.bg-alt:has(.mode-toggle:checked) {
 /* gallery start */
 
 .masonry-layout {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
+    align-content: start;
+    /* flex-wrap: wrap; */
 }
 
 .masonry-brick {
@@ -538,6 +542,41 @@ div.bg-alt:has(.mode-toggle:checked) {
     margin: auto;
     border: 4px solid var(--light-bg-clr);
     height: fit-content;
+}
+
+.pizza {
+    grid-column: 1/2;
+    grid-row: 1/4;
+}
+
+.beef-steaks {
+    grid-column: 2/3;
+    grid-row: 1/7;
+}
+
+.burger {
+    grid-column: 3/4;
+    grid-row: 1/4;
+}
+
+.levi-pizza {
+    grid-column: 1/2;
+    grid-row: 4/9;
+}
+
+.fried-chicken {
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+.kebab {
+    grid-column: 3/4;
+    grid-row: 7/10;
+}
+
+.frittata {
+    grid-column: 2/3;
+    grid-row: 7/11;
 }
 
 .masonry-brick img {
@@ -575,7 +614,7 @@ div.bg-alt:has(.mode-toggle:checked) {
     font-size: 24px;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     .masonry-layout {
         flex-direction: row;
     }
@@ -592,7 +631,7 @@ div.bg-alt:has(.mode-toggle:checked) {
     .masonry-brick {
         width: calc(33.33% - 10px);
     }
-}
+} */
 
 /* gallery end */
 
